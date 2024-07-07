@@ -1,0 +1,31 @@
+Directives are the commands to manipulate the behaviour of DOM.
+There are three types of Directives in Angular
+1. property/attribute Directives:
+These directives are used to manipulate properties of a element in the DOM
+[ngClass]="{'classname':flagname,'classname2':flagname2}",
+ you can add as many as classes you like
+[ngStyle] ="{'stylename':'value','stylename':flagname?value:value2}"
+ you can add as many as styles you like
+
+2. structural Directives: 
+we can change the structure of our template by DOM using these directives
+ 1.ngIf: 
+ ngIf is a directive used to change the structure of document based on a condition or flag. 
+ you can also use <ng-template> to represent a block, by default ng-template will be display none
+ 2.ngSwitch: 
+ <div [ngSwitch]="userRole">
+  <div *ngSwitchCase="'admin'">I'm admin</div>
+  <div *ngSwitchCase="'student'">I'm student</div>
+  <div *ngSwitchCase="'parent'">I'm parent</div>
+  <div *ngSwitchDefault>Please check your option</div>
+</div>
+ 3.ngFor:
+  <div *ngFor="let i of students;let x= index;let e=even;let o=odd">
+      <p>
+        Student Name:{{i}},{{x}}
+      </p>
+ </div>  
+
+
+
+3. custom directives
